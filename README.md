@@ -6,7 +6,7 @@ Picohash is a **Python** based program that converts .jpeg or .png images into A
 - Python2
 - PIL
 
-Currently supports .jpeg or .png format.
+Currently supports .jpeg or .png format. Works best for pictures with small dimension.
 
 ## Usage
 
