@@ -13,7 +13,7 @@ pixelMap = { 'E1':' ', 'C5':'.', 'A9':',', '8C':"-", '70':"'", '56':':', '3B':';
 
 def modification(imagefile):
 	text = open(imagefile.split('.')[0]+'.html', 'w')
-	text.write('<!DOCTYPE html><html><head><title>'+imagefile+'</title><style>body {font-size: 3px;}</style></head><body><pre>')
+	text.write('<!DOCTYPE html><html><head><title>'+imagefile+'</title><style>body {font-size: 3px;display:block;line-height:2px;}</style></head><body><pre>')
 	
 	image = Image.open(imagefile).convert('L').rotate(90, expand=True)
 	print 'processing ' + imagefile
