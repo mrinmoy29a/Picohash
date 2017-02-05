@@ -21,14 +21,15 @@ def modification(imagefile):
 	w, h = rgbim.size
 
 	for i in xrange(w):
+		imageString = ""
 		for j in xrange(h):
 			px = rgbim.getpixel((i, j))
 			for sym in ['E1', 'C5', 'A9', '8C', '70', '56', '3B', '22', '00']:
 				symVal = int(sym, 16)
 				if(px >= (symVal, symVal, symVal)):
-					text.write(pixelMap[sym])
+					imageString += pixelMap[sym]
 					break
-		text.write('\n')
+		text.write(imageString[::-1] + '\n')
 			
 	text.write('</pre></body></html>')
 	print 'Saved ' + imagefile + '.html'
